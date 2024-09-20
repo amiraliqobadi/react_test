@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import AddProduct from "./pages/AddProduct";
 import Home from "./pages/Home";
 import Header from "./components/header";
+import NotFound from "./pages/NotFound";
 
 function App() {
     const [cards, setCards] = useState([]);
@@ -54,6 +55,7 @@ function App() {
                     path="/Add_Product"
                     element={<AddProduct onAddCard={handleAddCard} />}
                 />
+                <Route path="*" element={<NotFound />} />
             </Routes>
         </Router>
     );
